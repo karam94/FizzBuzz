@@ -41,6 +41,13 @@ namespace FizzBuzz
             var result = FizzBuzz.Convert(15);
             result.ShouldBe("FizzBuzz");
         }
+        
+        [Fact]
+        public void ShouldConvert30ToFizzBuzz()
+        {
+            var result = FizzBuzz.Convert(30);
+            result.ShouldBe("FizzBuzz");
+        }
     }
 
     public static class FizzBuzz
