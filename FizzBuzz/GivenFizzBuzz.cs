@@ -22,6 +22,14 @@ namespace FizzBuzz
             var result = FizzBuzz.Convert(3);
             result.ShouldBe("Fizz");
         }
+        
+        
+        [Fact]
+        public void ShouldReturnFizzFor6()
+        {
+            var result = FizzBuzz.Convert(6);
+            result.ShouldBe("Fizz");
+        }
     }
 
     public static class FizzBuzz
