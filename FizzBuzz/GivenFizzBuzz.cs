@@ -1,4 +1,3 @@
-using System;
 using Shouldly;
 using Xunit;
 
@@ -17,7 +16,7 @@ namespace FizzBuzz
         [InlineData(14, "14")]
         [InlineData(971, "971")]
         [InlineData(1337, "1337")]
-        public void ShouldConvertNumberToAString(int numberToConvert, string expected)
+        public void ShouldConvertNonMultipleOf3Or5NumberToAString(int numberToConvert, string expected)
         {
             var result = FizzBuzz.Convert(numberToConvert);
             result.ShouldBe(expected);
@@ -29,28 +28,28 @@ namespace FizzBuzz
         [InlineData(9, "Fizz")]
         [InlineData(12, "Fizz")]
         [InlineData(327, "Fizz")]
-        public void ShouldConvertMultipleOf3AsFizz(int numberToConvert, string expected)
+        public void ShouldConvertMultipleOf3ToFizz(int numberToConvert, string expected)
         {
             var result = FizzBuzz.Convert(numberToConvert);
             result.ShouldBe(expected);
         }
-        
+
         [Theory]
         [InlineData(5, "Buzz")]
         [InlineData(10, "Buzz")]
         [InlineData(1000, "Buzz")]
-        public void ShouldConvertMultipleOf5AsBuzz(int numberToConvert, string expected)
+        public void ShouldConvertMultipleOf5ToBuzz(int numberToConvert, string expected)
         {
             var result = FizzBuzz.Convert(numberToConvert);
             result.ShouldBe(expected);
         }
-        
+
         [Theory]
         [InlineData(15, "FizzBuzz")]
         [InlineData(30, "FizzBuzz")]
         [InlineData(1500, "FizzBuzz")]
         [InlineData(3000, "FizzBuzz")]
-        public void ShouldConvertMultipleOf3And5AsFizzBuzz(int numberToConvert, string expected)
+        public void ShouldConvertMultipleOf3And5ToFizzBuzz(int numberToConvert, string expected)
         {
             var result = FizzBuzz.Convert(numberToConvert);
             result.ShouldBe(expected);
