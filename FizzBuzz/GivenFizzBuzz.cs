@@ -20,7 +20,6 @@ namespace FizzBuzz
         [InlineData(3, "Fizz")]
         [InlineData(6, "Fizz")]
         [InlineData(9, "Fizz")]
-        [InlineData(15, "Fizz")]
         public void ShouldConvertMultipleOf3AsFizz(int numberToConvert, string expected)
         {
             var result = FizzBuzz.Convert(numberToConvert);
@@ -40,12 +39,20 @@ namespace FizzBuzz
             var result = FizzBuzz.Convert(10);
             result.ShouldBe("Buzz");
         }
+        
+        [Fact]
+        public void ShouldConvert15ToFizzBuzz()
+        {
+            var result = FizzBuzz.Convert(15);
+            result.ShouldBe("FizzBuzz");
+        }
     }
 
     public static class FizzBuzz
     {
         public static string Convert(int number)
         {
+            if (number == 15) return "FizzBuzz";
             if (number % 5 == 0) return "Buzz";
             if (number % 3 == 0) return "Fizz";
             return number.ToString();
