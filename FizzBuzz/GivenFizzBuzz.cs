@@ -60,9 +60,13 @@ namespace FizzBuzz
     {
         public static string Convert(int number)
         {
-            if (number % 3 == 0 && number % 5 == 0) return "FizzBuzz";
-            if (number % 5 == 0) return "Buzz";
-            return number % 3 == 0 ? "Fizz" : number.ToString();
+            var numberIsMultipleOf3 = number % 3 == 0;
+            var numberIsMultipleOf5 = number % 5 == 0;
+            var numberIsMultipleOf3And5 = numberIsMultipleOf3 && numberIsMultipleOf5;
+
+            if (numberIsMultipleOf3And5) return "FizzBuzz";
+            if (numberIsMultipleOf5) return "Buzz";
+            return numberIsMultipleOf3 ? "Fizz" : number.ToString();
         }
     }
 }
