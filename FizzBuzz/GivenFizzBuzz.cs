@@ -16,19 +16,15 @@ namespace FizzBuzz
             result.ShouldBe(expected);
         }
 
-        [Fact]
-        public void ShouldReturnFizzFor3()
+        [Theory]
+        [InlineData(3, "Fizz")]
+        [InlineData(6, "Fizz")]
+        [InlineData(9, "Fizz")]
+        [InlineData(15, "Fizz")]
+        public void ShouldConvertMultipleOf3AsFizz(int numberToConvert, string expected)
         {
-            var result = FizzBuzz.Convert(3);
-            result.ShouldBe("Fizz");
-        }
-        
-        
-        [Fact]
-        public void ShouldReturnFizzFor6()
-        {
-            var result = FizzBuzz.Convert(6);
-            result.ShouldBe("Fizz");
+            var result = FizzBuzz.Convert(numberToConvert);
+            result.ShouldBe(expected);
         }
     }
 
