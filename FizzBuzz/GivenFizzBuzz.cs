@@ -6,25 +6,14 @@ namespace FizzBuzz
 {
     public class GivenFizzBuzz
     {
-        [Fact]
-        public void ShouldConvert1To1AsString()
+        [Theory]
+        [InlineData(1, "1")]
+        [InlineData(2, "2")]
+        [InlineData(3, "3")]
+        public void ShouldConvertNumberToAString(int numberToConvert, string expected)
         {
-            var result = FizzBuzz.Convert(1);
-            result.ShouldBe("1");
-        }
-
-        [Fact]
-        public void ShouldConvert2To2AsString()
-        {
-            var result = FizzBuzz.Convert(2);
-            result.ShouldBe("2");
-        }
-        
-        [Fact]
-        public void ShouldConvert4To4AsString()
-        {
-            var result = FizzBuzz.Convert(4);
-            result.ShouldBe("4");
+            var result = FizzBuzz.Convert(numberToConvert);
+            result.ShouldBe(expected);
         }
     }
 
