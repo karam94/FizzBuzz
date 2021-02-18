@@ -33,6 +33,13 @@ namespace FizzBuzz
             var result = FizzBuzz.Convert(5);
             result.ShouldBe("Buzz");
         }
+        
+        [Fact]
+        public void ShouldConvert10ToBuzz()
+        {
+            var result = FizzBuzz.Convert(10);
+            result.ShouldBe("Buzz");
+        }
     }
 
     public static class FizzBuzz
