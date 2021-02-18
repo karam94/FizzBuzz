@@ -14,10 +14,17 @@ namespace FizzBuzz
         }
 
         [Fact]
-        public void ShouldConvert2ToTwoAsString()
+        public void ShouldConvert2To2AsString()
         {
             var result = FizzBuzz.Convert(2);
             result.ShouldBe("2");
+        }
+        
+        [Fact]
+        public void ShouldConvert4To4AsString()
+        {
+            var result = FizzBuzz.Convert(4);
+            result.ShouldBe("4");
         }
     }
 
