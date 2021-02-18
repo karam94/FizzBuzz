@@ -34,19 +34,14 @@ namespace FizzBuzz
             var result = FizzBuzz.Convert(numberToConvert);
             result.ShouldBe(expected);
         }
-
-        [Fact]
-        public void ShouldConvert15ToFizzBuzz()
-        {
-            var result = FizzBuzz.Convert(15);
-            result.ShouldBe("FizzBuzz");
-        }
         
-        [Fact]
-        public void ShouldConvert30ToFizzBuzz()
+        [Theory]
+        [InlineData(15, "FizzBuzz")]
+        [InlineData(30, "FizzBuzz")]
+        public void ShouldConvertMultipleOf3And5AsFizzBuzz(int numberToConvert, string expected)
         {
-            var result = FizzBuzz.Convert(30);
-            result.ShouldBe("FizzBuzz");
+            var result = FizzBuzz.Convert(numberToConvert);
+            result.ShouldBe(expected);
         }
     }
 
