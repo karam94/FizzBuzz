@@ -15,6 +15,13 @@ namespace FizzBuzz
             var result = FizzBuzz.Convert(numberToConvert);
             result.ShouldBe(expected);
         }
+
+        [Fact]
+        public void ShouldReturnFizzFor3()
+        {
+            var result = FizzBuzz.Convert(3);
+            result.ShouldBe("Fizz");
+        }
     }
 
     public static class FizzBuzz
