@@ -7,10 +7,17 @@ namespace FizzBuzz
     public class GivenFizzBuzz
     {
         [Fact]
-        public void ShouldConvertOneToOneAsString()
+        public void ShouldConvert1To1AsString()
         {
             var result = FizzBuzz.Convert(1);
             result.ShouldBe("1");
+        }
+        
+        [Fact]
+        public void ShouldConvert2ToTwoAsString()
+        {
+            var result = FizzBuzz.Convert(2);
+            result.ShouldBe("2");
         }
     }
 
