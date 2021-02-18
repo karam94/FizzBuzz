@@ -10,6 +10,11 @@ namespace FizzBuzz
         [InlineData(1, "1")]
         [InlineData(2, "2")]
         [InlineData(4, "4")]
+        [InlineData(7, "7")]
+        [InlineData(8, "8")]
+        [InlineData(11, "11")]
+        [InlineData(13, "13")]
+        [InlineData(14, "14")]
         public void ShouldConvertNumberToAString(int numberToConvert, string expected)
         {
             var result = FizzBuzz.Convert(numberToConvert);
@@ -20,6 +25,7 @@ namespace FizzBuzz
         [InlineData(3, "Fizz")]
         [InlineData(6, "Fizz")]
         [InlineData(9, "Fizz")]
+        [InlineData(12, "Fizz")]
         public void ShouldConvertMultipleOf3AsFizz(int numberToConvert, string expected)
         {
             var result = FizzBuzz.Convert(numberToConvert);
