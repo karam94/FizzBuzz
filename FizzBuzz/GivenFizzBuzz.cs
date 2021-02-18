@@ -25,21 +25,16 @@ namespace FizzBuzz
             var result = FizzBuzz.Convert(numberToConvert);
             result.ShouldBe(expected);
         }
+        
+        [Theory]
+        [InlineData(5, "Buzz")]
+        [InlineData(10, "Buzz")]
+        public void ShouldConvertMultipleOf5AsBuzz(int numberToConvert, string expected)
+        {
+            var result = FizzBuzz.Convert(numberToConvert);
+            result.ShouldBe(expected);
+        }
 
-        [Fact]
-        public void ShouldConvert5ToBuzz()
-        {
-            var result = FizzBuzz.Convert(5);
-            result.ShouldBe("Buzz");
-        }
-        
-        [Fact]
-        public void ShouldConvert10ToBuzz()
-        {
-            var result = FizzBuzz.Convert(10);
-            result.ShouldBe("Buzz");
-        }
-        
         [Fact]
         public void ShouldConvert15ToFizzBuzz()
         {
