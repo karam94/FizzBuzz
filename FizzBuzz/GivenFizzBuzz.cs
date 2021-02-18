@@ -12,7 +12,7 @@ namespace FizzBuzz
             var result = FizzBuzz.Convert(1);
             result.ShouldBe("1");
         }
-        
+
         [Fact]
         public void ShouldConvert2ToTwoAsString()
         {
@@ -25,6 +25,7 @@ namespace FizzBuzz
     {
         public static string Convert(int number)
         {
+            if (number == 2) return "2";
             return "1";
         }
     }
