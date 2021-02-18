@@ -1,4 +1,5 @@
 using System;
+using Shouldly;
 using Xunit;
 
 namespace FizzBuzz
@@ -8,6 +9,7 @@ namespace FizzBuzz
         [Fact]
         public void Test1()
         {
+            false.ShouldBeTrue();
         }
     }
 }
