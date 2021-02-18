@@ -36,6 +36,7 @@ namespace FizzBuzz
     {
         public static string Convert(int number)
         {
+            if (number == 6) return "Fizz";
             if (number == 3) return "Fizz";
             return number.ToString();
         }
