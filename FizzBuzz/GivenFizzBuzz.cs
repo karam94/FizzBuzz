@@ -26,6 +26,13 @@ namespace FizzBuzz
             var result = FizzBuzz.Convert(numberToConvert);
             result.ShouldBe(expected);
         }
+
+        [Fact]
+        public void ShouldConvert5ToBuzz()
+        {
+            var result = FizzBuzz.Convert(5);
+            result.ShouldBe("Buzz");
+        }
     }
 
     public static class FizzBuzz
