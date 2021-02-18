@@ -9,7 +9,7 @@ namespace FizzBuzz
         [Theory]
         [InlineData(1, "1")]
         [InlineData(2, "2")]
-        [InlineData(3, "3")]
+        [InlineData(4, "4")]
         public void ShouldConvertNumberToAString(int numberToConvert, string expected)
         {
             var result = FizzBuzz.Convert(numberToConvert);
@@ -28,6 +28,7 @@ namespace FizzBuzz
     {
         public static string Convert(int number)
         {
+            if (number == 3) return "Fizz";
             return number.ToString();
         }
     }
